@@ -4,12 +4,8 @@ import { ServerStyleSheet, StyleSheetManager } from "styled-components"
 export default class Document extends NextDoc {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => (
-      <StyleSheetManager sheet={sheet.instance}>
-        <App {...props} />
-      </StyleSheetManager>
-    ))
-    const styles = sheet.getStyleElement()
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
+    const styles = sheet.getStyleTags()
     return { ...page, styles }
   }
   render() {
