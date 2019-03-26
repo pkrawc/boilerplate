@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { colors } from "constants"
 
-export default props => {
+export default function Home(props) {
   return (
     <Main>
       <h1>React Boilerplate</h1>
