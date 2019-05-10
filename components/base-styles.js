@@ -17,4 +17,7 @@ body {
   position: relative;
   font-size: 1.5rem;
 }
+#__next {
+  overflow: auto;
+}
 `

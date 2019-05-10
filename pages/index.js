@@ -11,9 +11,4 @@ export default function Home(props) {
 
 const Main = styled.main`
   min-height: 100vh;
-  text-align: center;
-  h1 {
-    padding: 5rem 3rem 3rem;
-    background: ${colors.black};
-  }
 `
